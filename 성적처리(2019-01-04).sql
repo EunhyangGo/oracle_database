@@ -33,3 +33,29 @@ WHERE st_name LIKE '김%';
 SELECT * FROM tbl_student
 WHERE st_addr LIKE '서울%';
 -- st_addr 칼럼에 있는 주소가 서울이라고 시작되는 문자열의 모든 데이터
+
+-- st_name 칼럼에 "정"이라는 문자열이 포함된 데이터를 검색하는 키워드
+-- 가운데에 "정"이 있는게 아님.
+SELECT * FROM tbl_student
+WHERE st_name LIKE '%윤%';
+
+SELECT * FROM tbl_student
+WHERE st_name LIKE '%정%';
+
+-- 세개의 조건중에 하나라도 만족을 하고 있는 데이터를 찾는 키워드
+SELECT * FROM tbl_student
+WHERE st_name LIKE '%윤'
+        OR st_name LIKE '%정%'
+        OR st_name LIKE '%철%';
+        
+-- private String sc_num;
+--	private int sc_kor;
+--	private int sc_eng;
+--	private int sc_math;
+
+CREATE TABLE tbl_score(
+   sc_num CHAR(5) PRIMARY KEY ,
+   sc_kor NUMBER(3),
+   sc_eng NUMBER(3),
+   sc_math NUMBER(3)
+   );

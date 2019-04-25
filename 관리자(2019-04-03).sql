@@ -1,0 +1,9 @@
+-- 여기는 관리자 화면
+CREATE TABLESPACE iolistTS
+DATAFILE 'D:\bizwork\ordata\iolist.dbf'
+SIZE 100M AUTOEXTEND ON NEXT 100K;
+
+CREATE USER ioList IDENTIFIED BY 1234
+DEFAULT TABLESPACE iolistTS;
+
+GRANT DBA TO iolist;

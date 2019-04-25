@@ -108,7 +108,8 @@ SELECT T.str_num,
                T.intKor,
                T.intEng,
                T.intMath
-FROM tbl_test1 T LEFT JOIN tbl_users U
+FROM tbl_test1 T
+LEFT JOIN tbl_users U
  ON T.str_num = U.str_num;
  
  -- 복잡한 SQL문(select)의 설정사항을 table처럼 등록하고, 
